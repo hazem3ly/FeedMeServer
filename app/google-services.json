@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "945290909859",
+    "firebase_url": "https://feedme-76d93.firebaseio.com",
+    "project_id": "feedme-76d93",
+    "storage_bucket": "feedme-76d93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945290909859:android:498475c218fa7180",
+        "android_client_info": {
+          "package_name": "com.neway.feedme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945290909859-c4tu5m6bnm08sfkqv6est2vesj2qo4va.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neway.feedme",
+            "certificate_hash": "58c584fb0375bbeb498ce162b99b27a53402766f"
+          }
+        },
+        {
+          "client_id": "945290909859-n8fimu5iojgpr66hu9tak1npbifvlg4t.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "945290909859-n8fimu5iojgpr66hu9tak1npbifvlg4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_8NaL960p05CEdhizcs5_2BiSAEmS6Uo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945290909859-n8fimu5iojgpr66hu9tak1npbifvlg4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945290909859:android:ded3d2e012a3be96",
+        "android_client_info": {
+          "package_name": "com.neway.feedmeserver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945290909859-j6309h94iml2758tk11q23bn1niv9tae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neway.feedmeserver",
+            "certificate_hash": "58c584fb0375bbeb498ce162b99b27a53402766f"
+          }
+        },
+        {
+          "client_id": "945290909859-n8fimu5iojgpr66hu9tak1npbifvlg4t.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "945290909859-n8fimu5iojgpr66hu9tak1npbifvlg4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_8NaL960p05CEdhizcs5_2BiSAEmS6Uo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945290909859-n8fimu5iojgpr66hu9tak1npbifvlg4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
