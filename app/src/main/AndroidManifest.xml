@@ -44,6 +44,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity android:name=".activities.home.HomeActivity" />
         <activity android:name=".activities.foodlist.FoodListActivity" />
+        <activity android:name=".activities.orderStatus.OrderStatusActivity" />
     </application>
 
 </manifest>
