@@ -36,6 +36,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Nav
     RecyclerView menu_recycler;
     LinearLayoutManager layoutManager;
     FloatingActionButton fab;
+    private FirebaseRecyclerAdapter adapter;
 
     @Override
     protected int getContentResource() {
@@ -53,6 +54,9 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Nav
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                mPresenter.showAddDialog(HomeActivity.this);
+
 //                startActivity(new Intent(HomeActivity.this, CartActivity.class));
             }
         });
@@ -123,6 +127,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Nav
 
     @Override
     public void onDataLoaded(FirebaseRecyclerAdapter adapter) {
+        this.adapter = adapter;
         menu_recycler.setAdapter(adapter);
     }
 
@@ -132,5 +137,23 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Nav
         data.putString("KEY", menuKey);
 //        Navegator.navigateToActivity(this, FoodListActivity.class, data);
         Toast.makeText(this, model.getName(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        String title = item.getTitle().toString();
+        switch (title) {
+            case "Update":
+                mPresenter.showUpdateDialog(HomeActivity.this,adapter.getRef(item.getOrder()).
+                        getKey(), (Category) adapter.getItem(item.getOrder()));
+                break;
+            case "Delete":
+                mPresenter.showDeleteDialog(HomeActivity.this,adapter.getRef(item.getOrder()).getKey());
+                break;
+        }
+
+
+        return super.onContextItemSelected(item);
     }
 }

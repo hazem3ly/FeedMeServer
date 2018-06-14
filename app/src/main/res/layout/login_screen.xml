@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter Phone Number"
             android:inputType="phone"
-            android:text="010"
+            android:text="011"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textSize="34sp"
