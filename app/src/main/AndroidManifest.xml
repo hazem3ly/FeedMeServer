@@ -43,6 +43,7 @@
             android:name=".lib.imagesUtils.ChooserActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity android:name=".activities.home.HomeActivity" />
+        <activity android:name=".activities.foodlist.FoodListActivity" />
     </application>
 
 </manifest>

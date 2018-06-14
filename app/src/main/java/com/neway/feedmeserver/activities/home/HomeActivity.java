@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.neway.feedmeserver.R;
+import com.neway.feedmeserver.activities.foodlist.FoodListActivity;
 import com.neway.feedmeserver.activities.launcher.LauncherActivity;
 import com.neway.feedmeserver.bases.BaseActivity;
 import com.neway.feedmeserver.model.App;
@@ -56,9 +57,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Nav
             public void onClick(View v) {
 
                 mPresenter.showAddDialog(HomeActivity.this);
-
-//                startActivity(new Intent(HomeActivity.this, CartActivity.class));
-            }
+                }
         });
         menu_recycler = findViewById(R.id.recycler_menu);
         menu_recycler.setLayoutManager(layoutManager);
@@ -135,7 +134,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Nav
     public void onItemClicked(String menuKey, Category model) {
         Bundle data = new Bundle();
         data.putString("KEY", menuKey);
-//        Navegator.navigateToActivity(this, FoodListActivity.class, data);
+        Navegator.navigateToActivity(this, FoodListActivity.class, data);
         Toast.makeText(this, model.getName(), Toast.LENGTH_SHORT).show();
     }
 

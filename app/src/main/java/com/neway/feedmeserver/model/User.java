@@ -8,7 +8,7 @@ public class User {
     private String name;
     private String password;
     private String phone;
-    private String IsStaff;
+    private String isStaff;
 
     public User() {
     }
@@ -44,10 +44,10 @@ public class User {
     }
 
     public String getIsStaff() {
-        return IsStaff;
+        return isStaff;
     }
 
     public void setIsStaff(String isStaff) {
-        IsStaff = isStaff;
+        this.isStaff = isStaff;
     }
 }

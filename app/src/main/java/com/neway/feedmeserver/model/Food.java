@@ -6,47 +6,47 @@ package com.neway.feedmeserver.model;
  */
 public class Food {
 
-    private String Name;
-    private String Image;
-    private String Description;
+    private String name;
+    private String image;
+    private String description;
     private String price;
-    private String Discount;
-    private String MenuId;
+    private String discount;
+    private String menuId;
 
     public Food() {
     }
 
     public Food(String name, String image, String description, String price, String discount, String menuId) {
-        Name = name;
-        Image = image;
-        Description = description;
+        this.name = name;
+        this.image = image;
+        this.description = description;
         this.price = price;
-        Discount = discount;
-        MenuId = menuId;
+        this.discount = discount;
+        this.menuId = menuId;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getImage() {
-        return Image;
+        return image;
     }
 
     public void setImage(String image) {
-        Image = image;
+        this.image = image;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getPrice() {
@@ -58,18 +58,18 @@ public class Food {
     }
 
     public String getDiscount() {
-        return Discount;
+        return discount;
     }
 
     public void setDiscount(String discount) {
-        Discount = discount;
+        this.discount = discount;
     }
 
     public String getMenuId() {
-        return MenuId;
+        return menuId;
     }
 
     public void setMenuId(String menuId) {
-        MenuId = menuId;
+        this.menuId = menuId;
     }
 }
