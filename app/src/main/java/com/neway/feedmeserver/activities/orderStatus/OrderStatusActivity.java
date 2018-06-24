@@ -1,13 +1,19 @@
 package com.neway.feedmeserver.activities.orderStatus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.neway.feedmeserver.R;
+import com.neway.feedmeserver.activities.home.HomeActivity;
+import com.neway.feedmeserver.activities.trackingOrderMap.TrackingOrderMapActivity;
 import com.neway.feedmeserver.bases.BaseActivity;
+import com.neway.feedmeserver.model.Category;
+import com.neway.feedmeserver.model.Request;
 
 /**
  * Created by Hazem Ali
@@ -20,6 +26,7 @@ public class OrderStatusActivity extends BaseActivity implements OrderStatusCont
 
 
     OrderStatusPresenter mPresenter;
+    private FirebaseRecyclerAdapter adapter;
 
     @Override
     protected int getContentResource() {
@@ -51,10 +58,34 @@ public class OrderStatusActivity extends BaseActivity implements OrderStatusCont
 
     }
 
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        String title = item.getTitle().toString();
+        switch (title) {
+            case "Update":
+                mPresenter.showUpdateDialog(OrderStatusActivity.this,adapter.getRef(item.getOrder()).
+                        getKey(), (Request) adapter.getItem(item.getOrder()));
+                break;
+            case "Delete":
+                mPresenter.showDeleteDialog(OrderStatusActivity.this,adapter.getRef(item.getOrder()).getKey());
+                break;
+        }
+
+
+        return super.onContextItemSelected(item);
+    }
 
     @Override
     public void onDataLoaded(FirebaseRecyclerAdapter adapter) {
+        this.adapter = adapter;
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void OnRequestClicked(Request request) {
+        TrackingOrderMapActivity.currentRequest = request;
+        startActivity(new Intent(this, TrackingOrderMapActivity.class));
     }
 
     @Override

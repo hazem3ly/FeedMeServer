@@ -18,6 +18,11 @@
         android:supportsRtl="true"
         android:name=".model.App"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/m_google_api_key"/>
+
         <activity android:name=".activities.launcher.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".lib.permissions.PermissionsActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
@@ -45,6 +51,7 @@
         <activity android:name=".activities.home.HomeActivity" />
         <activity android:name=".activities.foodlist.FoodListActivity" />
         <activity android:name=".activities.orderStatus.OrderStatusActivity" />
+        <activity android:name=".activities.trackingOrderMap.TrackingOrderMapActivity" />
     </application>
 
 </manifest>

@@ -30,4 +30,16 @@ public class App extends Application {
     public static App getInstance() {
         return instance;
     }
+
+
+    public static String covertCodeToStatus(String status) {
+        switch (status) {
+            case "0":
+                return "Placed";
+            case "1":
+                return "On It's Way";
+            default:
+                return "Shipped";
+        }
+    }
 }

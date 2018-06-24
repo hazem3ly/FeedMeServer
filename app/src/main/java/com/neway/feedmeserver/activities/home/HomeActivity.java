@@ -21,6 +21,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.neway.feedmeserver.R;
 import com.neway.feedmeserver.activities.foodlist.FoodListActivity;
 import com.neway.feedmeserver.activities.launcher.LauncherActivity;
+import com.neway.feedmeserver.activities.orderStatus.OrderStatusActivity;
 import com.neway.feedmeserver.bases.BaseActivity;
 import com.neway.feedmeserver.model.App;
 import com.neway.feedmeserver.model.Category;
@@ -115,7 +116,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.View, Nav
             case R.id.nav_menu:
                 break;
             case R.id.nav_orders:
-//                startActivity(new Intent(HomeActivity.this, OrderStatusActivity.class));
+                startActivity(new Intent(HomeActivity.this, OrderStatusActivity.class));
                 break;
         }
 

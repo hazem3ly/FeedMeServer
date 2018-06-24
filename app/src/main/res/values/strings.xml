@@ -3,4 +3,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="m_google_api_key" translatable="false">AIzaSyAoV5EDkIl2Hlmz2rP3DSA02po1F9Dx5YE</string>
+
 </resources>
